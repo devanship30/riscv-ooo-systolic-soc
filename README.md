@@ -15,7 +15,7 @@ tradeoffs, and ensuring the interconnect could sustain the array's bandwidth
 needs.
 
 <p align="center">
-  <img src="doc/architecture_diagram.png" alt="SoC Architecture" width="600">
+  <img src="docs/architecture_diagram.png" alt="SoC Architecture" width="600">
 </p>
 
 ## Components
