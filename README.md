@@ -10,6 +10,6 @@ accelerator at full bandwidth. The SoC pairs a general-purpose RISC-V
 out-of-order core with a systolic array for matrix multiplication, connected
 over an AXI4 interconnect. The core handles control flow and orchestration;
 the systolic array handles the compute. The interesting design problems were
-in the memory system — sizing the scratchpad, deciding cache vs scratchpad
+in the memory system sizing the scratchpad, deciding cache vs scratchpad
 tradeoffs, and ensuring the interconnect could sustain the array's bandwidth
 needs.
