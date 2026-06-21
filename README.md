@@ -24,7 +24,5 @@ needs.
 |---|---|
 | RISC-V OoO Core | RV32I, 16-entry ROB, 8-entry reservation stations, register renaming (RAT), bimodal branch predictor |
 | Systolic Array | 4x4 INT8 PE grid, weight-stationary dataflow, AXI4-Stream interface |
-| L1 Instruction Cache | 4KB, direct-mapped, single-cycle hit |
-| L1 Data Cache | 4KB, direct-mapped, write-through, byte/half/word access |
-| On-Chip SRAM | General-purpose memory backing, IHP PDK macro |
+| On-Chip SRAM | Single shared memory for instructions and data, IHP PDK macro, accessed directly over AXI4 |
 | AXI4 Crossbar | 2 masters, 4 slaves, address-decoded routing with round-robin arbitration |
