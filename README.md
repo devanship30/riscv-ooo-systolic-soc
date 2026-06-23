@@ -26,3 +26,16 @@ needs.
 | Systolic Array | 8x8 INT8 PE grid, weight-stationary dataflow, AXI4-Stream interface |
 | On-Chip SRAM | Single shared memory for instructions and data, IHP PDK macro, accessed directly over AXI4 |
 | AXI4 Crossbar | 2 masters, 4 slaves, address-decoded routing with round-robin arbitration |
+
+## Repository Structure
+
+```
+rtl/          — RTL design files
+  core/       — RISC-V OoO core (fetch, decode, rename, issue, execute, commit)
+  ai_acc/     — AI accelerator (PE array, weight controller, scratchpad, output buffer)
+  interconnect/— AXI4 crossbar and APB bridge
+tb/           — Verification environment
+  unit/       — Standalone module testbenches (per-module sanity checks)
+  env/        — Full UVM environment (agents, scoreboard, sequences, coverage)
+docs/         — Architecture spec, DV plan, microarchitecture diagrams
+```
