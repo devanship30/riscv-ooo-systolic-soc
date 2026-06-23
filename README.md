@@ -23,6 +23,6 @@ needs.
 | Block | Description |
 |---|---|
 | RISC-V OoO Core | RV32I, 16-entry ROB, 8-entry reservation stations, register renaming (RAT), bimodal branch predictor |
-| Systolic Array | 4x4 INT8 PE grid, weight-stationary dataflow, AXI4-Stream interface |
+| Systolic Array | 8x8 INT8 PE grid, weight-stationary dataflow, AXI4-Stream interface |
 | On-Chip SRAM | Single shared memory for instructions and data, IHP PDK macro, accessed directly over AXI4 |
 | AXI4 Crossbar | 2 masters, 4 slaves, address-decoded routing with round-robin arbitration |
