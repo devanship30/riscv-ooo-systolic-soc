@@ -22,12 +22,29 @@ module pe_tb();
         in_left = 0;
         in_top = 0;
 
-        #30 rst_n = 1;
-        #20 load_en = 1; in_left = 3;
-        #20 load_en = 0; in_left = 2; in_top = 0;
-        #20 in_left = 4; in_top = 6;
-        #20 in_left = -1; in_top = 0;
-        #20 $finish;
+        @(posedge clk); #1;
+        @(posedge clk); #1;
+        rst_n = 1;
+
+        @(posedge clk); #1;
+        load_en = 1; 
+        in_left = 3;
+
+        @(posedge clk); #1;
+        load_en = 0; 
+        in_left = 2;
+
+        @(posedge clk); #1;
+        in_left = 4; 
+        in_top = 6;
+
+        @(posedge clk); #1;
+        in_left = -1; 
+        in_top = 0;
+
+        @(posedge clk); #1;
+        @(posedge clk); #1;
+        $finish;
     end
 
 endmodule

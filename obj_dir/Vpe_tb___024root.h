@@ -31,8 +31,9 @@ class alignas(VL_CACHE_LINE_BYTES) Vpe_tb___024root final : public VerilatedModu
     IData/*31:0*/ __VactIterCount;
     VlUnpacked<CData/*0:0*/, 2> __Vm_traceActivity;
     VlDelayScheduler __VdlySched;
-    VlTriggerVec<2> __VactTriggered;
-    VlTriggerVec<2> __VnbaTriggered;
+    VlTriggerScheduler __VtrigSched_h0332e823__0;
+    VlTriggerVec<3> __VactTriggered;
+    VlTriggerVec<3> __VnbaTriggered;
 
     // INTERNAL VARIABLES
     Vpe_tb__Syms* const vlSymsp;

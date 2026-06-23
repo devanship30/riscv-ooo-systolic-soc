@@ -26,35 +26,80 @@ VL_INLINE_OPT VlCoroutine Vpe_tb___024root___eval_initial__TOP__Vtiming__0(Vpe_t
     vlSelf->pe_tb__DOT__load_en = 0U;
     vlSelf->pe_tb__DOT__in_left = 0U;
     vlSelf->pe_tb__DOT__in_top = 0U;
-    co_await vlSelf->__VdlySched.delay(0x1eULL, nullptr, 
+    co_await vlSelf->__VtrigSched_h0332e823__0.trigger(0U, 
+                                                       nullptr, 
+                                                       "@(posedge pe_tb.clk)", 
+                                                       "tb/unit/ai_acc/pe_tb.sv", 
+                                                       25);
+    co_await vlSelf->__VdlySched.delay(1ULL, nullptr, 
                                        "tb/unit/ai_acc/pe_tb.sv", 
                                        25);
-    vlSelf->pe_tb__DOT__rst_n = 1U;
-    co_await vlSelf->__VdlySched.delay(0x14ULL, nullptr, 
+    co_await vlSelf->__VtrigSched_h0332e823__0.trigger(0U, 
+                                                       nullptr, 
+                                                       "@(posedge pe_tb.clk)", 
+                                                       "tb/unit/ai_acc/pe_tb.sv", 
+                                                       26);
+    co_await vlSelf->__VdlySched.delay(1ULL, nullptr, 
                                        "tb/unit/ai_acc/pe_tb.sv", 
                                        26);
-    vlSelf->pe_tb__DOT__load_en = 1U;
-    vlSelf->pe_tb__DOT__in_left = 3U;
-    co_await vlSelf->__VdlySched.delay(0x14ULL, nullptr, 
-                                       "tb/unit/ai_acc/pe_tb.sv", 
-                                       27);
-    vlSelf->pe_tb__DOT__load_en = 0U;
-    vlSelf->pe_tb__DOT__in_left = 2U;
-    vlSelf->pe_tb__DOT__in_top = 0U;
-    co_await vlSelf->__VdlySched.delay(0x14ULL, nullptr, 
-                                       "tb/unit/ai_acc/pe_tb.sv", 
-                                       28);
-    vlSelf->pe_tb__DOT__in_left = 4U;
-    vlSelf->pe_tb__DOT__in_top = 6U;
-    co_await vlSelf->__VdlySched.delay(0x14ULL, nullptr, 
+    vlSelf->pe_tb__DOT__rst_n = 1U;
+    co_await vlSelf->__VtrigSched_h0332e823__0.trigger(0U, 
+                                                       nullptr, 
+                                                       "@(posedge pe_tb.clk)", 
+                                                       "tb/unit/ai_acc/pe_tb.sv", 
+                                                       29);
+    co_await vlSelf->__VdlySched.delay(1ULL, nullptr, 
                                        "tb/unit/ai_acc/pe_tb.sv", 
                                        29);
+    vlSelf->pe_tb__DOT__load_en = 1U;
+    vlSelf->pe_tb__DOT__in_left = 3U;
+    co_await vlSelf->__VtrigSched_h0332e823__0.trigger(0U, 
+                                                       nullptr, 
+                                                       "@(posedge pe_tb.clk)", 
+                                                       "tb/unit/ai_acc/pe_tb.sv", 
+                                                       33);
+    co_await vlSelf->__VdlySched.delay(1ULL, nullptr, 
+                                       "tb/unit/ai_acc/pe_tb.sv", 
+                                       33);
+    vlSelf->pe_tb__DOT__load_en = 0U;
+    vlSelf->pe_tb__DOT__in_left = 2U;
+    co_await vlSelf->__VtrigSched_h0332e823__0.trigger(0U, 
+                                                       nullptr, 
+                                                       "@(posedge pe_tb.clk)", 
+                                                       "tb/unit/ai_acc/pe_tb.sv", 
+                                                       37);
+    co_await vlSelf->__VdlySched.delay(1ULL, nullptr, 
+                                       "tb/unit/ai_acc/pe_tb.sv", 
+                                       37);
+    vlSelf->pe_tb__DOT__in_left = 4U;
+    vlSelf->pe_tb__DOT__in_top = 6U;
+    co_await vlSelf->__VtrigSched_h0332e823__0.trigger(0U, 
+                                                       nullptr, 
+                                                       "@(posedge pe_tb.clk)", 
+                                                       "tb/unit/ai_acc/pe_tb.sv", 
+                                                       41);
+    co_await vlSelf->__VdlySched.delay(1ULL, nullptr, 
+                                       "tb/unit/ai_acc/pe_tb.sv", 
+                                       41);
     vlSelf->pe_tb__DOT__in_left = 0xffU;
     vlSelf->pe_tb__DOT__in_top = 0U;
-    co_await vlSelf->__VdlySched.delay(0x14ULL, nullptr, 
+    co_await vlSelf->__VtrigSched_h0332e823__0.trigger(0U, 
+                                                       nullptr, 
+                                                       "@(posedge pe_tb.clk)", 
+                                                       "tb/unit/ai_acc/pe_tb.sv", 
+                                                       45);
+    co_await vlSelf->__VdlySched.delay(1ULL, nullptr, 
                                        "tb/unit/ai_acc/pe_tb.sv", 
-                                       30);
-    VL_FINISH_MT("tb/unit/ai_acc/pe_tb.sv", 30, "");
+                                       45);
+    co_await vlSelf->__VtrigSched_h0332e823__0.trigger(0U, 
+                                                       nullptr, 
+                                                       "@(posedge pe_tb.clk)", 
+                                                       "tb/unit/ai_acc/pe_tb.sv", 
+                                                       46);
+    co_await vlSelf->__VdlySched.delay(1ULL, nullptr, 
+                                       "tb/unit/ai_acc/pe_tb.sv", 
+                                       46);
+    VL_FINISH_MT("tb/unit/ai_acc/pe_tb.sv", 47, "");
 }
 
 #ifdef VL_DEBUG
@@ -71,6 +116,8 @@ void Vpe_tb___024root___eval_triggers__act(Vpe_tb___024root* vlSelf) {
                                      | ((~ (IData)(vlSelf->pe_tb__DOT__rst_n)) 
                                         & (IData)(vlSelf->__Vtrigprevexpr___TOP__pe_tb__DOT__rst_n__0))));
     vlSelf->__VactTriggered.set(1U, vlSelf->__VdlySched.awaitingCurrentTime());
+    vlSelf->__VactTriggered.set(2U, ((IData)(vlSelf->pe_tb__DOT__clk) 
+                                     & (~ (IData)(vlSelf->__Vtrigprevexpr___TOP__pe_tb__DOT__clk__0))));
     vlSelf->__Vtrigprevexpr___TOP__pe_tb__DOT__clk__0 
         = vlSelf->pe_tb__DOT__clk;
     vlSelf->__Vtrigprevexpr___TOP__pe_tb__DOT__rst_n__0 

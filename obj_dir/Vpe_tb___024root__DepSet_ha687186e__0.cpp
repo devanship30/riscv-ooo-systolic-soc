@@ -97,8 +97,21 @@ void Vpe_tb___024root___timing_resume(Vpe_tb___024root* vlSelf) {
     Vpe_tb__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vpe_tb___024root___timing_resume\n"); );
     // Body
+    if ((4ULL & vlSelf->__VactTriggered.word(0U))) {
+        vlSelf->__VtrigSched_h0332e823__0.resume("@(posedge pe_tb.clk)");
+    }
     if ((2ULL & vlSelf->__VactTriggered.word(0U))) {
         vlSelf->__VdlySched.resume();
+    }
+}
+
+void Vpe_tb___024root___timing_commit(Vpe_tb___024root* vlSelf) {
+    if (false && vlSelf) {}  // Prevent unused
+    Vpe_tb__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
+    VL_DEBUG_IF(VL_DBG_MSGF("+    Vpe_tb___024root___timing_commit\n"); );
+    // Body
+    if ((! (4ULL & vlSelf->__VactTriggered.word(0U)))) {
+        vlSelf->__VtrigSched_h0332e823__0.commit("@(posedge pe_tb.clk)");
     }
 }
 
@@ -109,10 +122,11 @@ bool Vpe_tb___024root___eval_phase__act(Vpe_tb___024root* vlSelf) {
     Vpe_tb__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vpe_tb___024root___eval_phase__act\n"); );
     // Init
-    VlTriggerVec<2> __VpreTriggered;
+    VlTriggerVec<3> __VpreTriggered;
     CData/*0:0*/ __VactExecute;
     // Body
     Vpe_tb___024root___eval_triggers__act(vlSelf);
+    Vpe_tb___024root___timing_commit(vlSelf);
     __VactExecute = vlSelf->__VactTriggered.any();
     if (__VactExecute) {
         __VpreTriggered.andNot(vlSelf->__VactTriggered, vlSelf->__VnbaTriggered);

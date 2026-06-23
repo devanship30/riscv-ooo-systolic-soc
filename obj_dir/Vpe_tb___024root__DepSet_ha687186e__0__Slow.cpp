@@ -38,6 +38,9 @@ VL_ATTR_COLD void Vpe_tb___024root___dump_triggers__act(Vpe_tb___024root* vlSelf
     if ((2ULL & vlSelf->__VactTriggered.word(0U))) {
         VL_DBG_MSGF("         'act' region trigger index 1 is active: @([true] __VdlySched.awaitingCurrentTime())\n");
     }
+    if ((4ULL & vlSelf->__VactTriggered.word(0U))) {
+        VL_DBG_MSGF("         'act' region trigger index 2 is active: @(posedge pe_tb.clk)\n");
+    }
 }
 #endif  // VL_DEBUG
 
@@ -55,6 +58,9 @@ VL_ATTR_COLD void Vpe_tb___024root___dump_triggers__nba(Vpe_tb___024root* vlSelf
     }
     if ((2ULL & vlSelf->__VnbaTriggered.word(0U))) {
         VL_DBG_MSGF("         'nba' region trigger index 1 is active: @([true] __VdlySched.awaitingCurrentTime())\n");
+    }
+    if ((4ULL & vlSelf->__VnbaTriggered.word(0U))) {
+        VL_DBG_MSGF("         'nba' region trigger index 2 is active: @(posedge pe_tb.clk)\n");
     }
 }
 #endif  // VL_DEBUG
