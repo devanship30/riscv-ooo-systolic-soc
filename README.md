@@ -1,6 +1,6 @@
 # RISC-V OoO SoC with Systolic Array Accelerator
 
-A RISC-V out-of-order processor integrated with a 4x4 systolic array
+A RISC-V out-of-order processor integrated with a 8x8 systolic array
 accelerator, designed and verified from RTL through tape-in ready GDS.
 
 ## Overview
