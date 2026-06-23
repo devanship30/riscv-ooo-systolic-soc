@@ -6,13 +6,15 @@ accelerator, designed and verified from RTL through tape-in ready GDS.
 ## Overview
 
 This project explores the architectural challenge of feeding a fixed-function
-accelerator at full bandwidth. The SoC pairs a general-purpose RISC-V
-out-of-order core with a systolic array for matrix multiplication, connected
-over an AXI4 interconnect. The core handles control flow and orchestration;
-the systolic array handles the compute. The interesting design problems were
-in the memory system sizing the scratchpad, deciding cache vs scratchpad
-tradeoffs, and ensuring the interconnect could sustain the array's bandwidth
-needs.
+accelerator at full bandwidth when the working dataset exceeds on-chip memory
+capacity. The SoC pairs a general-purpose RISC-V out-of-order core with an
+8x8 weight-stationary systolic array accelerator, connected over an AXI4
+interconnect, targeting fixed-kernel image convolution (blur/sharpen) on
+1024x1024 images. The core directly accesses on-chip SRAM over AXI4 for
+both instructions and data. The interesting design problems are in the memory
+system — sizing the scratchpad, sustaining accelerator bandwidth, and
+streaming image data row-by-row to avoid buffering the full image on-chip.
+
 
 <p align="center">
   <img src="docs/architecture_diagram.png" alt="SoC Architecture" width="600">
