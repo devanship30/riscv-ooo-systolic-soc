@@ -1,0 +1,51 @@
+# VCS / Synopsys artifacts
+simv
+simv.daidir/
+csrc/
+DVEfiles/
+AN.DB/
+*.key
+vc_hdrs.h
+*.vdb
+*.vpd
+*.fsdb
+*.log
+
+# Verdi
+novas*
+verdi_config_file
+*.svf
+*.novas
+
+# SymbiYosys
+*/PASS/
+*/FAIL/
+*/ERROR/
+*.aig
+
+# Build directories
+scripts/build/
+scripts/waves/
+scripts/coverage/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Coverage HTML (generated)
+docs/coverage_report.html
+
+# Editor artifacts
+*.swp
+*.swo
+.vscode/
+.idea/
+*.orig
+
+# Simulation logs
+*.log
+
+# Firmware / ELF (generated, not committed)
+*.elf
+*.hex
+*.bin
