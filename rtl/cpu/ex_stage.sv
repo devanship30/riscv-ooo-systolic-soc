@@ -19,6 +19,7 @@ input logic [4:0] id_ex_alu_op,   //id to ex - which ALU operation
 input logic       id_ex_alu_src,  //When 0 -> use rs2, when 1->use imm
 input logic       id_ex_mem_read, //is this a LOAD?
 input logic       id_ex_mem_write,//is this a STORE?
+input logic [2:0] id_ex_mem_funct3,//funct3 passed from ID
 input logic       id_ex_reg_wen,  //does this write a register?
 input logic [1:0] id_ex_wb_src,   //writeback source (ALU/MEM/PC+4)
 input logic       id_ex_is_branch,//is this a branch?
@@ -39,6 +40,7 @@ output logic [31:0] ex_mem_alu_result_out,
 output logic [31:0] ex_mem_rs2_data,
 output logic        ex_mem_mem_read,
 output logic        ex_mem_mem_write,
+output logic [2:0]  ex_mem_mem_funct3,
 output logic        ex_mem_reg_wen,
 output logic [1:0]  ex_mem_wb_src,
 output logic        ex_mem_valid,
@@ -98,6 +100,7 @@ ex_mem_alu_result_out<=0;
 ex_mem_rs2_data<=0;
 ex_mem_mem_read<=0;
 ex_mem_mem_write<=0;
+ex_mem_mem_funct3<=0;
 ex_mem_reg_wen<=0;
 ex_mem_wb_src<=0;
 ex_mem_valid<=0;
@@ -110,6 +113,7 @@ ex_mem_alu_result_out<= alu_result;
 ex_mem_rs2_data<= operand_b_rs2;
 ex_mem_mem_read<= id_ex_mem_read;
 ex_mem_mem_write<= id_ex_mem_write;
+ex_mem_mem_funct3<=id_ex_mem_funct3;
 ex_mem_reg_wen<= id_ex_reg_wen;
 ex_mem_wb_src<= id_ex_wb_src;
 ex_mem_valid<= id_ex_valid;

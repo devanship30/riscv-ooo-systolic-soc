@@ -113,6 +113,7 @@ if(!rst_n)begin
 id_ex_alu_op<=0;
 id_ex_alu_src<=0;
 id_ex_mem_write<=0;
+id_ex_mem_funct3<=0;
 id_ex_mem_read<=0;
 id_ex_reg_wen<=0;
 id_ex_wb_src<=0;
@@ -143,6 +144,7 @@ id_ex_alu_op   <=   dec_alu_op;
 id_ex_alu_src  <=  dec_alu_src;
 id_ex_mem_read <= dec_mem_read;
 id_ex_mem_write<=dec_mem_write;
+id_ex_mem_funct3<=      funct3;
 id_ex_reg_wen  <=  dec_reg_wen;
 id_ex_wb_src   <=   dec_wb_src;
 id_ex_is_branch<=dec_is_branch;
